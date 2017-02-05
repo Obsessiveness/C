@@ -1,0 +1,61 @@
+#include<stdio.h>
+#include<stdlib.h>
+int main (void)
+{
+	int a,b,c,t;
+	printf("please in put three number\n");
+	scanf("%d,%d,%d",&a,&b,&c);
+	if(a>b)
+	{
+		if(b>c)
+			printf("a=%d,b=%d,c=%d\n",a,b,c);
+		else
+		{
+			if(a>c)
+			{
+				t=c;
+				c=b;
+				b=t;
+				printf("a=%d,b=%d,c=%d\n",a,b,c);
+			}
+			else
+			{
+				t=c;
+				c=a;
+				a=t;
+				printf("a=%d,b=%d,c=%d\n",a,b,c);
+			}
+		}
+	}
+	else
+	{
+		if(a>c)
+		{
+			t=b;
+			b=a;
+			a=t;
+			printf("a=%d,b=%d,c=%d\n",a,b,c);
+		}
+		else
+			if(c>b)
+			{
+				t=c;
+				c=a;
+				a=t;
+				printf("a=%d,b=%d,c=%d\n",a,b,c);
+			}
+			else
+			{
+				t=b;
+				b=a;
+				a=t;
+				t=c;
+				c=b;
+				b=t;
+				printf("a=%d,b=%d,c=%d\n",a,b,c);
+			}
+	}
+	system("pause");
+	return 0;
+
+}
